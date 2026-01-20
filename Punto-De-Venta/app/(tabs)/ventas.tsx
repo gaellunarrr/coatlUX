@@ -1,10 +1,12 @@
-import { View, Text } from 'react-native';
+import { View, Text } from "react-native";
 
 export default function VentasScreen() {
   return (
-    <View className="flex-1 justify-center items-center bg-white">
+    <View className="flex-1 items-center justify-center bg-white">
       <Text className="text-xl font-bold text-gray-800">Ventas</Text>
-      <Text className="text-gray-500 mt-2">Carrito de compras y proceso de venta</Text>
+      <Text className="mt-2 text-gray-500">
+        Carrito de compras y proceso de venta
+      </Text>
     </View>
   );
 }
