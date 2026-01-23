@@ -15,6 +15,6 @@ export const useProductStore = create(
     {
       name: "product-storage",
       storage: createJSONStorage(() => AsyncStorage),
-    },
-  ),
+    }
+  )
 );

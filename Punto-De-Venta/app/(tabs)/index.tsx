@@ -1,6 +1,6 @@
 import React from "react";
 import { View, Text, ScrollView, Pressable } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Link } from "expo-router";
 import {
   ShoppingCart,
@@ -10,6 +10,7 @@ import {
 } from "lucide-react-native";
 
 export default function HomeScreen() {
+  const insets = useSafeAreaInsets();
   // Estos datos vendrán luego de tu Zustand Store
   const stats = [
     {
@@ -29,7 +30,9 @@ export default function HomeScreen() {
   ];
 
   return (
-    <SafeAreaView>
+    <View
+      style={{ flex: 1, paddingTop: insets.top, paddingBottom: insets.bottom }}
+    >
       <ScrollView className="flex-1 bg-gray-50 p-4">
         {/* Header de Bienvenida */}
         <View className="mb-8 mt-4">
@@ -89,6 +92,6 @@ export default function HomeScreen() {
           </Text>
         </View>
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
