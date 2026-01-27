@@ -30,9 +30,7 @@ export default function HomeScreen() {
   ];
 
   return (
-    <View
-      style={{ flex: 1, paddingTop: insets.top, paddingBottom: insets.bottom }}
-    >
+    <View style={{ flex: 1, paddingTop: insets.top }}>
       <ScrollView className="flex-1 bg-gray-50 p-4">
         {/* Header de Bienvenida */}
         <View className="mb-8 mt-4">
