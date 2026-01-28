@@ -1,5 +1,12 @@
 import { Tabs } from "expo-router";
-import { Home, Package, ShoppingCart } from "lucide-react-native";
+import {
+  Home,
+  Package,
+  ShoppingBag,
+  CopyPlus,
+  ConciergeBell,
+} from "lucide-react-native";
+import React from "react";
 
 export default function TabLayout() {
   return (
@@ -20,10 +27,24 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="agregar"
+        options={{
+          title: "Agregar",
+          tabBarIcon: ({ color }) => <CopyPlus size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
         name="ventas"
         options={{
           title: "Ventas",
-          tabBarIcon: ({ color }) => <ShoppingCart size={24} color={color} />,
+          tabBarIcon: ({ color }) => <ShoppingBag size={24} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="mesas"
+        options={{
+          title: "Mesas",
+          tabBarIcon: ({ color }) => <ConciergeBell size={24} color={color} />,
         }}
       />
     </Tabs>
